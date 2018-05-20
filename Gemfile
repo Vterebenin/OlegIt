@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 
@@ -33,21 +32,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
-
 # C U S T O M
 gem 'engtagger', '~> 0.2.1'
-gem 'themoviedb', '~> 1.0', '>= 1.0.1'
-gem 'simple_form', '~> 4.0', '>= 4.0.1'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'devise', '~> 4.4', '>= 4.4.3'
-
-group :development do
-  gem 'rails_real_favicon'
-end
+gem 'themoviedb'
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'devise'
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
