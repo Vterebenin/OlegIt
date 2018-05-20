@@ -32,6 +32,10 @@
 		transition: 0.4s linear
 .font-size-wrapper
 	font-size: 22px
+	width: 100%
+.main-wrapper
+	width: 100%
+
 
 .alert-success
 	background-color: $custom-grey
@@ -78,6 +82,24 @@ body
 	flex: 1 0 auto
 
 
+.card-body
+	background-color: transparent
+	border-color: transparent
+	font-size: 20px
+.table-names
+	color: $custom-grey
+	font-size: 22px
+.table-names, .table-item
+	padding: 5px
+	border-bottom: 4px solid $custom-dark
+.table-item:last-child
+	border-bottom: none
+.film-title-wrapper
+	float: left
+	text-align: left
+	.film-item:nth-child(2n)
+		color: $custom-grey
+		filter: brightness(30%)
 header, footer 
 	h1 
 		padding: 0px
@@ -110,6 +132,7 @@ footer
 .holder
 	font-size: 44px
 	margin-bottom: 40px
+	margin-top: 40px
 	h1
 		margin: -25px
 
@@ -119,18 +142,18 @@ footer
 		content: ""
 		width: 150px
 		height: 3px
-		position: fixed
+		position: absolute
 		left: 25%
-		margin-left: 0px
+		margin-left: -150px
 		margin-top: 122px
 	&::after
 		background-color: $custom-dark
 		content: ""
 		width: 150px
 		height: 3px
-		position: fixed
+		position: absolute
 		right: 25%
-		margin-left: 0px
+		margin-right: -150px
 		margin-top: 59px
 .navbar-dark .navbar-nav .active>.nav-link
 	background-color: unset
@@ -139,6 +162,7 @@ footer
 	position: absolute
 	left: -9%
 	top: 20%
+	z-index: -10
 .turbolinks-progress-bar
 	background: $custom-dark !important
 
@@ -149,6 +173,7 @@ footer
 		display: inline-block
 		opacity: .7
 	input
+		min-width: 300px
 		width: 300px
 		font-size: 18px
 		display: inline-block

@@ -1,38 +1,83 @@
 
 <% if user_signed_in? %>
 
-	<% if @olegs.nil? %>
-		<h3>Pathetic. You have 0 answers.</h3>
-		<p>	Oleg is upset about you...</p>
-		<%= link_to "I will not upset Oleg anymore", new_oleg_path, class: 'btn' %>
+<% if current_user.points.nil? %>
+<div class="row">
+	<div class="col-md-12">
+		<h1>Pathetic. You have 0 answers.</h1>
+		<h1>	Oleg is upset about you...</h1>
+		<%= link_to "Get to work!", new_oleg_path, class: 'btn-custom' %>
+	</div>
+
 	<% else %>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+		<div class="font-size-wrapper">
+
+
+			<div class="col-md-12">
 				<h1>You have <%= pluralize(@olegs.count, 'right answer') %> </h1>
 				<h1>and <%= pluralize(current_user.points.to_i, "point") %></h1>				
 				<%= link_to "I can do more", new_oleg_path, class: 'btn btn-custom' %>
 			</div>
-			<% @olegs.each do |oleg| %>
-				<div class="col-12">
+			<% end %>
+			<div class="film-title-wrapper">
+			<% if !(current_user.points.to_i == 0) %>
+			<h1>My correct answers:</h1>
+			<% end %>
+			
+				<% @olegs.each do |oleg| %>
+				<div class="col-12 film-item">
 					<%= oleg.filmTitle %>
 				</div>
-			<% end %>
-			<% @users.each do |user| %>
-				<div class="col-12">
-					<%= user.email %>
-				</div>
-				<div class="col-6">
-					<%= user.points %>
-				</div>
-			<% end %>
-		</div>
-	<% end %>
+				<% end %>
+			</div>
+			
+			<div class="col-md-12">
+				<p>
+					<a class="top btn btn-default" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+						Top guessers
+					</a>
 
-<% else %>
+				</p>
+			</div>
+
+
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body col-md-12">
+					<div class="row table-names">
+						<div class="col-md-1">#</div>
+						<div class="col-md-9">User email</div>
+						<div class="col-md-2">Points</div>
+					</div>
+					<% @users.each_with_index do |user, i| %>
+					<div class="row table-item">
+						<div class="col-1">
+							<%= i += 1  %>
+						</div>
+						<div class="col-9">
+							<%= user.email %>
+						</div>
+						<div class="col-2">
+							<%= user.points.to_i %>
+						</div>
+					</div>
+					<% end %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+
+	<% else %>
 	<h2>Oleg make a mess in the town</h2>
 	<h2>We need help</h2>
+
 	<h2>And only you can help us!</h2>
-	<h2>So.. can you help us and guess it?</h2>
+	<div class="holder">
+		<h1>So... Can you</h1> <br>
+		<h1>guess it?</h1>
+	</div>
 	<p><%= render 'olegs/form' %></p>
 	<br>
 	<br>
@@ -40,7 +85,7 @@
 		<%= link_to "Join army", new_user_registration_path, class: 'btn btn-custom' %> or
 		<%= link_to "Back to work", new_user_session_url, class: 'btn btn-default' %>
 	</p>
-<% end %>
+	<% end %>
 
 
 

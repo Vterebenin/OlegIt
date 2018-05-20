@@ -6,10 +6,10 @@ class OlegsController < ApplicationController
 	def index
 		if user_signed_in? 
 			@olegs = Oleg.where(user_id: current_user).order("created_at DESC")
-			@users = User.all.order("points DESC")
+			@users = User.all.order("points DESC").slice(0, 10)
 		else
 			@dump_oleg = DumpOleg.new
-			#@teaser = film_to_oleg(get_random_film_name)
+			@teaser = film_to_oleg(get_random_film_name)
 		end
 	end
 
@@ -49,6 +49,7 @@ class OlegsController < ApplicationController
 		end
 
 		def add_points
+			current_user.points = 1 if current_user.points.nil?
 			current_user.points += (2**(((Oleg.where(user_id: current_user).count)/10).round)).to_f
 		end
 end
