@@ -51,7 +51,7 @@ module OlegsHelper
 	end
 
 	def get_random_film_name		
-		random_imdb_id = "tt0" + Random.rand(300000).to_s
+		random_imdb_id = "tt" + Random.rand(5000000).to_s
 		movie = Tmdb::Find.imdb_id(random_imdb_id)
 		if movie.keys.include?('movie_results') &&  # не пустой результат существует
 			 			 !movie['movie_results'].empty? && # есть фильмы
