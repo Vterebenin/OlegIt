@@ -34,9 +34,7 @@ class OlegsController < ApplicationController
 		end
 	end
 
-	def show
-		#
-	end
+
 
 	private
 

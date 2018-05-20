@@ -21,10 +21,10 @@
 			</div>
 			<% end %>
 			<div class="film-title-wrapper">
-			<% if !(current_user.points.to_i == 0) %>
-			<h1>My correct answers:</h1>
-			<% end %>
-			
+				<% if !(current_user.points.to_i == 0) %>
+				<h1>My correct answers:</h1>
+				<% end %>
+
 				<% @olegs.each do |oleg| %>
 				<div class="col-12 film-item">
 					<%= oleg.filmTitle %>
@@ -70,14 +70,16 @@
 	
 
 	<% else %>
-	<h2>Oleg make a mess in the town</h2>
-	<h2>We need help</h2>
-
-	<h2>And only you can help us!</h2>
-	<div class="holder">
-		<h1>So... Can you</h1> <br>
-		<h1>guess it?</h1>
+	<div class="font-size-wrapper-2">
+		<div>Badass make a mess in the cinema</div>
+		<div>One word in each title of the film is replaced by Oleg</div>
+		<div>And <strong>ONLY YOU</strong>(probably some guys too..) can help us!</div>
+		<div class="holder">
+			<h1>So... Can you</h1> <br>
+			<h1>guess it?</h1>
+		</div>
 	</div>
+	
 	<p><%= render 'olegs/form' %></p>
 	<br>
 	<br>

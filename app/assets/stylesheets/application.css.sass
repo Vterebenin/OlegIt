@@ -100,6 +100,12 @@ body
 	.film-item:nth-child(2n)
 		color: $custom-grey
 		filter: brightness(30%)
+.font-size-wrapper-2
+	font-size: 26px !important
+.modal-body
+	font-size: 20px
+	a
+		text-decoration: underline
 header, footer 
 	h1 
 		padding: 0px
@@ -162,7 +168,9 @@ footer
 	position: absolute
 	left: -9%
 	top: 20%
-	z-index: -10
+	img:hover
+		animation: shake 0.5s
+
 .turbolinks-progress-bar
 	background: $custom-dark !important
 
@@ -208,3 +216,38 @@ footer
 		color: $custom-grey
 		border-color: $custom-dark
 		transition: 0.4s linear
+
+
+@keyframes shake
+	0%
+		transform: translate(1px, 1px) rotate(0deg)
+
+	10%
+		transform: translate(-1px, -2px) rotate(-1deg)
+
+	20%
+		transform: translate(-3px, 0px) rotate(1deg)
+
+	30%
+		transform: translate(3px, 2px) rotate(0deg)
+
+	40%
+		transform: translate(1px, -1px) rotate(1deg)
+
+	50%
+		transform: translate(-1px, 2px) rotate(-1deg)
+
+	60%
+		transform: translate(-3px, 1px) rotate(0deg)
+
+	70%
+		transform: translate(3px, 1px) rotate(-1deg)
+
+	80%
+		transform: translate(-1px, -1px) rotate(1deg)
+
+	90%
+		transform: translate(1px, 2px) rotate(0deg)
+
+	100%
+		transform: translate(1px, -2px) rotate(-1deg)
