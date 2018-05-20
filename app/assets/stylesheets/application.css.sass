@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "var"
+
+.label-input-wrapper
+	margin-left: auto
+	margin-right: auto
+
+.alert-success
+	background-color: $custom-grey
+	border-color: $custom-dark
+	color: $accent
+
+.alert
+	margin-bottom: 50px
+	font-size: 22px
+
+
+
+
+
+// LINKS
+a
+	color: $custom-dark
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: $custom-grey
+		transition: color 0.2s linear
+
+
+body 
+	background-color: $accent
+	display: flex
+	//min-height: 100vh
+	height: 100vh
+	//width: 100vw
+	flex-direction: column
+	font-family: bernard_mt_condensedregular
+	// background-image: url('/assets/tiled_back.png')
+	// background-position: 0% 0%
+	// background-size: 15% 15%
+	// background-repeat: repeat
+	// background-origin: padding-box
+	// background-clip: border-box
+	// background-attachment: scroll
+	// background-color: transparent
+
+
+.main 
+	flex: 1 0 auto
+
+
+header, footer 
+	h1 
+		padding: 0px
+		margin: 0
+
+footer
+	.row
+		padding: 10px
+		.col
+			float: right
+			text-align: right
+			font-family: bernard_mt_condensedregular
+			li
+				list-style-type: none
+				display: inline-block
+
+//  NEW
+
+.main
+	.container
+		text-align: center
+		.alert
+			
+.OlegIt-film-title
+	font-size: 30px
+	margin-left: auto
+	margin-right: auto
+	width: 300px
+
+.holder
+	font-size: 44px
+	margin-bottom: 40px
+	h1
+		margin: -25px
+
+		color: $custom-grey
+	&::before
+		background-color: $custom-dark
+		content: ""
+		width: 150px
+		height: 3px
+		position: fixed
+		left: 25%
+		margin-left: 0px
+		margin-top: 122px
+	&::after
+		background-color: $custom-dark
+		content: ""
+		width: 150px
+		height: 3px
+		position: fixed
+		right: 25%
+		margin-left: 0px
+		margin-top: 59px
+
+
+.cool-guy
+	position: absolute
+	left: -9%
+	top: 20%
+.turbolinks-progress-bar
+	background: $custom-dark !important
+
+.oleg_answer
+	label
+		padding-right: 5px
+		font-size: 30px
+		display: inline-block
+		opacity: .7
+	input
+		width: 300px
+		font-size: 18px
+		display: inline-block
+		border: 3px solid $custom-dark
+		background-color: $custom-grey
+		&:focus
+			border-color: $custom-dark
+.btn-wrapper
+	margin-left: auto
+	margin-right: auto
+	.btn-custom
+		display: block
+.btn-custom
+	height: 40px
+	font-size: 18px
+	letter-spacing: 2px
+	display: inline-block
+	padding: 5px 10px
+	margin: 5px 10px
+	border: 3px solid $custom-dark
+	border-radius: 2px
+	background-color: $custom-dark
+	color: #ffc45e
+	text-shadow: 1px 1px 2px black
+	box-shadow: 1px 1px 2px black
+	&:hover
+		background-color: transparent
+		color: $custom-grey
+		transition: 0.4s linear
+	&:focus
+		background-color: transparent
+		color: $custom-grey
+		border-color: $custom-dark
+		transition: 0.4s linear

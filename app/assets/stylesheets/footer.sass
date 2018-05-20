@@ -1,0 +1,31 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "var"
+
+footer
+	padding-top: 10px
+	background-color: $custom-dark
+	font-family: bernard_mt_condensedregular
+	font-size: 1.2em
+	.container
+		opacity: .5
+		a
+			color: $custom-grey
+			opacity: .5
+			padding-right: 10px
+			&:hover
+				opacity: 1
+				transition: opacity 0.15s linear
+
+		button
+			background-color: transparent
+			border-color: transparent
+			color: $custom-grey
+			opacity: .5
+			&:hover
+				border-color: $accent
+				color: $accent
+				opacity: 1
+				transition: 0.2s linear
+
+

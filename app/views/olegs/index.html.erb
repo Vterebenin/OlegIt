@@ -1,0 +1,46 @@
+
+<% if user_signed_in? %>
+
+	<% if @olegs.nil? %>
+		<h3>Pathetic. You have 0 answers.</h3>
+		<p>	Oleg is upset about you...</p>
+		<%= link_to "I will not upset Oleg anymore", new_oleg_path, class: 'btn' %>
+	<% else %>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h1>You have <%= pluralize(@olegs.count, 'right answer') %> </h1>
+				<h1>and <%= pluralize(current_user.points.to_i, "point") %></h1>				
+				<%= link_to "I can do more", new_oleg_path, class: 'btn btn-default' %>
+			</div>
+			<% @olegs.each do |oleg| %>
+				<div class="col-12">
+					<%= oleg.filmTitle %>
+				</div>
+			<% end %>
+			<% @users.each do |user| %>
+				<div class="col-12">
+					<%= user.email %>
+				</div>
+				<div class="col-6">
+					<%= user.points %>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+
+<% else %>
+	<h2>Oleg make a mess in the town</h2>
+	<h2>We need help</h2>
+	<h2>And only you can help us!</h2>
+	<h2>So.. can you help us and guess it?</h2>
+	<!-- <p><%= render 'olegs/form' %></p> -->
+	<br>
+	<br>
+	<p>
+		<%= link_to "Join army", new_user_registration_path, class: 'btn btn-info' %> or
+		<%= link_to "Back to work", new_user_registration_path, class: 'btn btn-default' %>
+	</p>
+<% end %>
+
+
+

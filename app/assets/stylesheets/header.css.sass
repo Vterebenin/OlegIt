@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "var"
+
+
+.navbar
+	background-color: transparent
+	ul
+		li
+			font-size: 1.7em
+			font-family: bernard_mt_condensedregular
+	.dropdown-toggle
+		color: $custom-dark
+		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: $custom-grey
+			transition: color 0.2s linear
+	.dropdown-menu
+		background-color: $custom-dark
+		float: right
+		text-align: center
+		li
+			padding: 5px
+			font-size: 1.4em
+			a:hover
+				background-color: $custom-dark
+				transition: color 0.2s linear
+		.dropdown-divider
+			margin: 1.5rem 10px

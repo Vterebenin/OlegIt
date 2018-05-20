@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+	<%= simple_form_for @oleg do |f| %>
+	
+		<h4 class="OlegIt-film-title"><%= @oleg.filmTitle %></h4>	
+		<div class="row">
+			<div class="label-input-wrapper">
+				<%= f.input :answer, label: "Its:", placeholder: "Type full film title or just secred word" %>
+			</div>	
+			</div>
+			<div class="row">
+				<div class="btn-wrapper">
+				<%= f.button :submit, "I GUESS", class: "btn-custom" %>
+			</div>
+			</div>
+	<% end %>
+<% else %>
+	<%= simple_form_for @dump_oleg do |f| %>
+		<h4 class="OlegIt-film-title"><%= @teaser %></h4>
+		<%= f.input :answer %>
+		<%= f.button :submit, "I GUESS", class: "btn-custom" %>
+	<% end %>
+<% end %>
