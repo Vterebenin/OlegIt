@@ -10,7 +10,7 @@
 			<div class="col-md-10 col-md-offset-1">
 				<h1>You have <%= pluralize(@olegs.count, 'right answer') %> </h1>
 				<h1>and <%= pluralize(current_user.points.to_i, "point") %></h1>				
-				<%= link_to "I can do more", new_oleg_path, class: 'btn btn-default' %>
+				<%= link_to "I can do more", new_oleg_path, class: 'btn btn-custom' %>
 			</div>
 			<% @olegs.each do |oleg| %>
 				<div class="col-12">
@@ -33,12 +33,12 @@
 	<h2>We need help</h2>
 	<h2>And only you can help us!</h2>
 	<h2>So.. can you help us and guess it?</h2>
-	<!-- <p><%= render 'olegs/form' %></p> -->
+	<p><%= render 'olegs/form' %></p>
 	<br>
 	<br>
 	<p>
-		<%= link_to "Join army", new_user_registration_path, class: 'btn btn-info' %> or
-		<%= link_to "Back to work", new_user_registration_path, class: 'btn btn-default' %>
+		<%= link_to "Join army", new_user_registration_path, class: 'btn btn-custom' %> or
+		<%= link_to "Back to work", new_user_session_url, class: 'btn btn-default' %>
 	</p>
 <% end %>
 

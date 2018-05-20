@@ -23,6 +23,15 @@
 .label-input-wrapper
 	margin-left: auto
 	margin-right: auto
+.btn-default
+	margin: 5px
+	background-color: transparent
+	border: 3px solid $custom-dark
+	border-radius: 10px
+	&:hover
+		transition: 0.4s linear
+.font-size-wrapper
+	font-size: 22px
 
 .alert-success
 	background-color: $custom-grey
@@ -123,7 +132,8 @@ footer
 		right: 25%
 		margin-left: 0px
 		margin-top: 59px
-
+.navbar-dark .navbar-nav .active>.nav-link
+	background-color: unset
 
 .cool-guy
 	position: absolute
@@ -132,7 +142,7 @@ footer
 .turbolinks-progress-bar
 	background: $custom-dark !important
 
-.oleg_answer
+.oleg_answer, .dump_oleg_answer
 	label
 		padding-right: 5px
 		font-size: 30px

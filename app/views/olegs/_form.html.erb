@@ -16,7 +16,14 @@
 <% else %>
 	<%= simple_form_for @dump_oleg do |f| %>
 		<h4 class="OlegIt-film-title"><%= @teaser %></h4>
-		<%= f.input :answer %>
-		<%= f.button :submit, "I GUESS", class: "btn-custom" %>
+		<div class="label-input-wrapper">
+			<%= f.input :answer, label: "Its:", placeholder: "Type full film title or just secred word" %>
+		</div>
+		<div class="row">
+			<div class="btn-wrapper">
+								<%= f.button :submit, "I GUESS", class: "btn-custom" %>
+
+			</div>
+		</div>
 	<% end %>
 <% end %>
