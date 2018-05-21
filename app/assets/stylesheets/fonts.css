@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'bernard_mt_condensedregular';
-  src: font-url("bernard_mt_condensed__2_.eot");
-  src: font-url("bernard_mt_condensed__2_.eot?#iefix") format("embedded-opentype"), font-url("bernard-mt-condensed-webfont.woff") format("woff"), font-url("bernard-mt-condensed-webfont.ttf") format("truetype");
+  src: url("bernard_mt_condensed__2_.eot");
+  src: url("bernard_mt_condensed__2_.eot?#iefix") format("embedded-opentype"), font-url("bernard-mt-condensed-webfont.woff") format("woff"), font-url("bernard-mt-condensed-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
