@@ -1,24 +1,10 @@
-# README
+# Oleg-it development
+![alt text](https://pp.userapi.com/c847018/v847018242/56f48/aOlS3elC4Xk.jpg "Logo Title Text 1")
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# So how it work
 
-Things you may want to cover:
+By fetching films via imdb_ids core script of the app get the almost random film names and transform them into the names with secret word(only nouns and "nouns-like" words) replaced by Oleg.
+Users should take a guess what is hidden in a secret word. If they do it right, system will give them points as a reward. 
+Top 10 users will be displayed in index page.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I hope you enjoy my work. Feel free to fork it!
