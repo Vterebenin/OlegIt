@@ -92,4 +92,10 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   Tmdb::Api.key("tmdb_api_key")
+
+  # Add the font path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+  # Include font files to Assets
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 end
